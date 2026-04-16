@@ -57,7 +57,7 @@ export default function UploadPage({ onResults }) {
       formData.append("resume", file);
       formData.append("jobDescription", jd);
 
-      const res = await axios.post("/api/analyze", formData, {
+      const res = await axios.post("https://ats.bonto.run/analyze", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
